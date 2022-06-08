@@ -1,0 +1,51 @@
+name: CI
+
+on: [push]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+      - name: Cache pip
+        uses: actions/cache@v2
+        with:
+          path: ~/.cache/pip
+          key: ${{ runner.os }}-pip-${{ hashFiles('**/requirements.txt') }}
+          restore-keys: |
+            ${{ runner.os }}-pip-
+      - name: Cache PlatformIO
+        uses: actions/cache@v2
+        with:
+          path: ~/.platformio
+          key: ${{ runner.os }}-${{ hashFiles('**/lockfiles') }}
+      - name: Set up Python
+        uses: actions/setup-python@v2
+      - name: Install PlatformIO
+        run: |
+          python -m pip install --upgrade pip
+          pip install --upgrade platformio
+
+      - name: Install platform
+        run: pio platform install atmelsam
+      - name: Install platform esp
+        run: pio pkg install -p "espressif8266"
+
+      - name: Run PlatformIO nodemcu
+        run: pio run -e nodemcuv2
+
+      - name: Run PlatformIO wemos
+        run: pio run -e d1_mini_lite
+
+      - name: Run PlatformIO nano 33
+        run: pio run -e nano_33_iot
+
+      - name: Run PlatformIO uno wifi
+        run: pio run -e uno_wifi_rev2
+
+      - name: Install native
+        run: pio platform install native
+
+      - name: Run check
+        run: pio check -e check
