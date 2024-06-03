@@ -1,5 +1,12 @@
 # Relay_mqtt
 
+![GitHub Workflow Status](https://img.shields.io/github/actions/workflow/status/InzynierDomu/Relay_mqtt/main.yml?logo=github&style=flat-square)
+![GitHub release (latest SemVer)](https://img.shields.io/github/v/release/InzynierDomu/Relay_mqtt?style=flat-square)
+<a href="https://inzynierdomu.github.io/Relay_mqtt/">![GitHub docs deployments](https://img.shields.io/github/deployments/InzynierDomu/Relay_mqtt/github-pages?label=docs&logo=BookStack&logoColor=white&style=flat-square)</a>
+<a href="https://discord.gg/KmW6mHdg">![Discord](https://img.shields.io/discord/815929748882587688?logo=discord&logoColor=green&style=flat-square)</a>
+![GitHub](https://img.shields.io/github/license/InzynierDomu/Relay_mqtt?style=flat-square)
+<a href="https://tipo.live/p/inzynierdomu">![support](https://img.shields.io/badge/support-tipo.live-yellow?style=flat-square)</a>
+
 Simple project with publishing and receiving messages via MQTT
 
 Obsolete version for Arduino IDE: [repo link](https://github.com/InzynierDomu/MQTT_minimal)
