@@ -7,7 +7,12 @@
 ![GitHub](https://img.shields.io/github/license/InzynierDomu/Relay_mqtt?style=flat-square)
 <a href="https://tipo.live/p/inzynierdomu">![support](https://img.shields.io/badge/support-tipo.live-yellow?style=flat-square)</a>
 
-Simple project with publishing and receiving messages via MQTT
+Simple project with publishing and receiving messages via MQTT connected with pin state.
+
+<div align="center">
+## 💖 Support
+If any of my projects have helped you in your work, studies, or simply made your day better, please consider supporting my work. **[LINK](https://tipo.live/p/inzynierdomu)**
+</div>
 
 Obsolete version for Arduino IDE: [repo link](https://github.com/InzynierDomu/MQTT_minimal)
 
